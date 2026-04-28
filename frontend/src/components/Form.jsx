@@ -86,7 +86,7 @@ useEffect(() => {
         </div>
       </div>
 
-      {/* SECTION: MATERIALS */}
+      
 <div className="section">
   <h2 className="font-semibold mb-3">Materials Shared / Samples Distributed</h2>
 
@@ -104,7 +104,7 @@ useEffect(() => {
     </button>
   </div>
 
-  {/* Samples */}
+  
   <div className="border rounded-md p-3 bg-gray-50 flex justify-between items-center">
     <div>
       <p className="text-sm font-medium">Samples Distributed</p>
@@ -120,11 +120,11 @@ useEffect(() => {
 </div>
 
 
-{/* SECTION: OUTCOMES */}
+
 <div className="section">
   <h2 className="font-semibold mb-3">Observed / Inferred HCP Sentiment</h2>
 
-  {/* Sentiment */}
+  
 <div className="flex gap-6 mb-4 text-sm">
 
   <label className="flex items-center gap-2 cursor-pointer">
@@ -165,7 +165,7 @@ useEffect(() => {
 
 </div>
 
-  {/* Outcomes */}
+  
   <div className="mb-3">
     <label className="label">Outcomes</label>
     <textarea
@@ -177,7 +177,7 @@ useEffect(() => {
     />
   </div>
 
-  {/* Follow-up */}
+  
   <div>
     <label className="label">Follow-up Actions</label>
     <textarea
@@ -189,7 +189,7 @@ useEffect(() => {
     />
   </div>
 
-  {/* Suggested Follow-ups */}
+  
   <div className="mt-3 text-sm text-blue-600">
     <p>AI Suggested Follow-ups:</p>
     <ul className="list-disc ml-5">

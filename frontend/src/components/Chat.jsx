@@ -14,29 +14,29 @@ function Chat({ setData }) {
 
     const output = res.data.output;
 
-// 🕒 Add current date & time
+
 const now = new Date();
 
 output.date = now.toISOString().split("T")[0]; // YYYY-MM-DD
 output.time = now.toTimeString().slice(0, 5); // HH:MM
 
-    // Add messages
+    
     setMessages((prev) => [
   ...prev,
 
-  // 🟦 User message (clean)
+  
   {
     type: "user",
     text: input,
   },
 
-  // 🟦 AI summary message
+  
   {
     type: "ai-summary",
     text: `Today I met with ${output.hcp_name} and discussed ${output.summary}.`,
   },
 
-  // 🟩 Success message
+  
   {
     type: "ai-success",
     text: "✅ Interaction logged successfully! The details have been auto-filled.",
@@ -52,32 +52,32 @@ output.time = now.toTimeString().slice(0, 5); // HH:MM
 
       <h2 className="font-semibold mb-2">AI Assistant</h2>
 
-      {/* Hint */}
+      
       <div className="bg-gray-100 text-sm p-2 rounded mb-2">
         Log interaction via chat.
       </div>
 
-      {/* Chat box */}
+      
       <div className="flex-1 border rounded p-3 overflow-y-auto space-y-3">
 
         {messages.map((msg, i) => (
   <div key={i}>
 
-    {/* USER */}
+    
     {msg.type === "user" && (
       <div className="bg-blue-100 p-2 rounded text-sm">
         {msg.text}
       </div>
     )}
 
-    {/* AI SUMMARY */}
+    
     {msg.type === "ai-summary" && (
       <div className="bg-gray-100 p-2 rounded border-l-4 border-blue-500 text-sm">
         {msg.text}
       </div>
     )}
 
-    {/* SUCCESS */}
+    
     {msg.type === "ai-success" && (
       <div className="bg-green-100 p-2 rounded text-sm">
         {msg.text}
@@ -89,7 +89,7 @@ output.time = now.toTimeString().slice(0, 5); // HH:MM
 
       </div>
 
-      {/* Input */}
+      
       <div className="flex mt-2 gap-2">
         <input
           className="input flex-1"
