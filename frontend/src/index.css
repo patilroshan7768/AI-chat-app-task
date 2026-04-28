@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input {
+  @apply w-full border border-gray-300 rounded-md px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.label {
+  @apply text-xs font-medium text-gray-600 mb-1 block;
+}
+
+.section {
+  @apply bg-white p-5 rounded-lg shadow-sm border border-gray-200 mb-4;
+}
+
+.sub-box {
+  @apply border border-gray-200 rounded-md p-3 bg-gray-50 flex justify-between items-center;
+}
+
+.button-light {
+  @apply border border-gray-300 px-3 py-1 rounded text-sm hover:bg-gray-100;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
