@@ -10,13 +10,13 @@ last_memory = {}
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # allow all (for development)
+    allow_origins=["*"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# ✅ Create DB tables
+
 Base.metadata.create_all(bind=engine)
 
 
@@ -30,7 +30,6 @@ def chat(req: ChatRequest):
         "last_output": last_memory
     })
 
-    # ✅ save memory
     last_memory = result.get("output", {})
 
     return result
